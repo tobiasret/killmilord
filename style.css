@@ -1,0 +1,657 @@
+
+
+/*===== fuente =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+* {
+    box-sizing: border-box;
+}
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+  
+  --first-color: #3664F4;
+  --dark-color: #070D1F;
+  --dark-color-alt: #282B3A;
+  --white-color: #E6E7E9;
+
+  /*===== Fuente y tipografia para estilo =====*/
+  --body-font: 'Poppins', "Poppins", sans-serif;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+
+  --z-fixed: 100;
+}
+
+body {
+  background-color: black;
+  font-family: poppins;
+}
+a:hover {
+  text-decoration: line-through;
+  color: violet;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  :root {
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*===== BASE =====*/
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.news {
+  color: white;
+  font-size: 2em;
+}
+
+.abajo {
+  padding-bottom: 20px;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.bd-grid {
+  max-width: 1024px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 1.5rem;
+  background-color: black;
+  z-index: var(--z-fixed);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+ margin-top: 10px;
+
+}
+
+.header__toggle {
+  font-size: 1.5rem;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .nav {
+    position: fixed;
+
+    top: 0;
+    font-size: 12px;
+    left: -100%;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    padding: 1.5rem 0;
+    z-index: var(--z-fixed);
+    -webkit-transition: .10s;
+    transition: .5s;
+  }
+
+  .killmilord {
+    margin-top: 50px;
+    height: 20em;
+  }
+
+}
+
+.nav__content {
+  height: 100%;
+  -ms-grid-rows: max-content 1fr max-content;
+      grid-template-rows: -webkit-max-content 1fr -webkit-max-content;
+      grid-template-rows: max-content 1fr max-content;
+  row-gap: 2rem;
+}
+
+.nav__close {
+  position: absolute;
+  right: 1.5rem;
+  font-size: 1.3rem;
+  padding: .25rem;
+  
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: .25rem;
+  margin-bottom: .8rem;
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+}
+
+.nav__img img {
+  width: 46px;
+}
+
+.nav__name {
+  display: block;
+  color: white;
+}
+
+.nav__profesion {
+  font-size: var(--small-font-size);
+}
+
+@media (min-width:1025px) {
+
+.nav__menu {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+      margin-left: 9.5rem;
+
+}
+
+.nav__social {
+  margin-left: 3rem;
+}
+
+.killmilord {
+  width: 400px;
+  margin-top: 120px;
+}
+
+}
+.nav__item {
+  
+  margin: 2.5rem 0;
+}
+
+.nav__link {
+  color: white;
+   font-family: Poppins;
+   font-size: 15px;
+   font-weight: 200;
+}
+
+.nav__social {
+  padding-top: .5rem;
+}
+
+.nav__social-icon {
+  font-size: 1.2rem;
+  color: white;
+  margin-right: 1rem;
+}
+
+.nav__social-icon:hover {
+  color: darkviolet;
+}
+
+.show {
+  left: 0;
+}
+
+/*Active menu*/
+.active {
+  text-decoration: line-through;
+
+}
+
+.memberstitle {
+  color: white;
+ 
+  margin-bottom: 20px;
+  margin-top: 20px;
+ }
+
+ .container {
+  max-width: 900px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+  .header {
+    height: calc(var(--header-height) + 2rem);
+  }
+  .header__logo, .header__toggle {
+    display: none;
+
+  }
+  .nav {
+    width: 100%;
+
+  }
+  .nav__content {
+    -ms-grid-columns: (max-content)[3];
+        grid-template-columns: repeat(3, -webkit-max-content);
+        grid-template-columns: repeat(3, max-content);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .nav__close, .nav__profesion {
+    display: none;
+  }
+  .nav__perfil {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav__img {
+    width: 62px;
+    height: 52px;
+    margin-right: .5rem;
+    margin-bottom: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav__img img {
+    width: 56px;
+  }
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav__item {
+    margin: 0 .25rem;
+  }
+  .nav__link {
+    padding: .5rem .8rem;
+    border-radius: .25rem;
+  }
+  .nav__link:hover {
+
+    text-decoration: line-through;
+  }
+  .active {
+    text-decoration: line-through;
+    color: var(--white-color);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+.contenedor {
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b8d8db04-629d-4c18-be6d-005b7c437b25/d5i45do-85af208d-7921-40fe-9e3e-a279f9427494.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2I4ZDhkYjA0LTYyOWQtNGMxOC1iZTZkLTAwNWI3YzQzN2IyNVwvZDVpNDVkby04NWFmMjA4ZC03OTIxLTQwZmUtOWUzZS1hMjc5Zjk0Mjc0OTQuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.mK5dsCudi0T1U8VQOX4hK2tjPMqFxJXKtEVXY_RoNVI);
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+
+.container-news {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  margin-top: 70px;
+  margin-bottom: 20px;
+
+}
+
+.content {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+header .img {
+    width: 100%;
+    height: 100px;
+}
+footer .img {
+    width: 100%;
+    height: 30px;
+}
+.news{
+    padding:0 95px;
+
+}
+.news::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.newscard .img {
+    height: 10em;
+    width: 100%;
+    object-fit: cover;
+}
+.newscard {
+     margin-bottom: 20px;
+ }
+.newscard .title{
+    font-size: 0.6em;
+
+    color: rebeccapurple;
+
+    margin-bottom: 10px;
+}
+.newscard .desc{
+    font-size: 0.4em;
+    margin-bottom: 10px;
+}
+.newscard .title-news {
+    text-transform: uppercase;
+    color: #ccc;
+    font-size: 0.5em;
+    padding: 0 1px;
+  font-weight: 500;
+   font-family: Poppins;
+  color: violet;
+
+}
+
+.section-title{
+    text-transform: capitalize;
+    padding-left: 10px;
+    margin-bottom: 10px;
+  border-left:5px solid red;
+  
+}
+
+
+
+@media (min-width:500px) {
+    .newscard{
+        width:50%;
+        float: left;
+        margin-bottom: 30px;
+        padding-right: 10px;
+    }
+    news{
+        padding: 0;
+    }
+
+
+
+}
+
+
+
+@media (min-width:700px) {
+   .newscard{
+       width: 33.33%;
+       float: left;
+       margin-bottom: 30px;
+       padding-right: 10px;
+   }
+    news{
+        padding: 0;
+    }
+
+
+
+}
+@media (min-width:320px)  { 
+
+
+
+/* smartphones, iPhone, portrait 480x320 phones */
+
+
+.content {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+
+
+
+h1, h2, h3 {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+header .img {
+    width: 100%;
+    height: 100px;
+}
+
+.members {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+.news{
+    padding:0 20px;
+
+
+}
+.news::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.newscard .img {
+    height: 6em;
+    width: 100%;
+    object-fit: cover;
+    -webkit-box-shadow:0 0 10px purple; 
+-moz-box-shadow: 0 0 10px purple; 
+box-shadow:0 0 12px purple;
+margin-bottom: 2px;
+}
+.newscard {
+     margin-bottom: 20px;
+
+ }
+
+
+
+
+.newscard .title{
+    font-size: 0;
+    color: rebeccapurple;
+    margin-bottom: 5px;
+}
+.newscard .desc{
+    font-size: 0.3em;
+    line-height: 14px;
+    margin-bottom: 10px;
+    margin-top: 8px;
+    font-weight: 400;
+}
+.newscard .title-news {
+    text-transform: uppercase;
+    color: #ccc;
+    font-size: 0.5em;
+    padding: 0 1px;
+  font-weight: 500;
+  color: violet;
+
+}
+
+.section-title{
+    text-transform: capitalize;
+    padding-left: 10px;
+    margin-bottom: 10px;
+  border-left:5px solid red;
+  
+}
+ }
+
+
+
+
+
+ @media only screen and (min-width: 992px) {
+
+  .content {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+
+h1, h2, h3 {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+header .img {
+    width: 100%;
+    height: 100px;
+}
+
+.news{
+    padding:0 50px;
+    margin-top: 120px;
+
+}
+.news::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.newscard .img {
+    height: 10em;
+    width: 100%;
+    object-fit: cover;
+}
+.newscard {
+     margin-bottom: 20px;
+ }
+.newscard .title{
+    font-size: 0;
+    color: rebeccapurple;
+    margin-bottom: 5px;
+}
+.newscard .desc{
+    font-size: 0.4em;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+.newscard .title-news {
+    text-transform: uppercase;
+    color: #ccc;
+    font-size: 0.7em;
+    padding: 0 1px;
+  font-weight: 500;
+  color: violet;
+
+}
+
+.section-title{
+    text-transform: capitalize;
+    padding-left: 10px;
+    margin-bottom: 10px;
+  border-left:5px solid red;
+  
+}
+ }
+
+
+ .news-title {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+ }
+
+ .news{
+    padding:0 50px;
+    margin-top: 120px;
+
+}
+
+ }
+}
+

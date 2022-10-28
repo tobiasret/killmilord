@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style type="text/css">*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+.slideshow-block{
+  float: left;
+  margin:10px;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  background: #111 url('https://farm1.staticflickr.com/38/82549647_36259bcf44_q.jpg');
+}
+
+.slides{
+  z-index:0;
+  visibility: hidden;
+}
+.slides.active{
+  visibility: visible;
+}
+.clear{
+  clear: both;
+}</style>
+  <title></title>
+</head>
+<body>
+
+
+<h1>Hover Image Cycle</h1>
+<h2>Hover the image to cycle through</h2>
+<div class="slideshow-block">
+  <a href="#" class="link"></a>
+    <ul class="slides">
+      <li><a href="https://www.flickr.com/photos/oddsock/100943517" title="Andy Warhol - Marilyn  1967 by Ian Burt, on Flickr"><img src="https://farm1.staticflickr.com/42/100943517_d7eb5ef652_q.jpg" width="150" height="150" alt="Andy Warhol - Marilyn  1967"></a></li>
+      <li><a href="https://www.flickr.com/photos/loop_oh/1336594977" title="Mao von Andy Warhol by Rupert Ganzer, on Flickr"><img src="https://farm2.staticflickr.com/1273/1336594977_f14172c6a7_q.jpg" width="150" height="150" alt="Mao von Andy Warhol"></a></li>
+      <li><a href="https://www.flickr.com/photos/rocor/10917802203" title="Andy Warhol by rocor, on Flickr"><img src="https://farm3.staticflickr.com/2815/10917802203_2d42a3eb84_q.jpg" width="150" height="150" alt="Andy Warhol"></a></li> 
+    <ul>
+ </div>
+<div class="slideshow-block">
+  <a href="#" class="link"></a>
+    <ul class="slides">
+      <li><a href="https://www.flickr.com/photos/oddsock/100943517" title="Andy Warhol - Marilyn  1967 by Ian Burt, on Flickr"><img src="https://farm1.staticflickr.com/42/100943517_d7eb5ef652_q.jpg" width="150" height="150" alt="Andy Warhol - Marilyn  1967"></a></li>
+      <li><a href="https://www.flickr.com/photos/loop_oh/1336594977" title="Mao von Andy Warhol by Rupert Ganzer, on Flickr"><img src="https://farm2.staticflickr.com/1273/1336594977_f14172c6a7_q.jpg" width="150" height="150" alt="Mao von Andy Warhol"></a></li>
+      <li><a href="https://www.flickr.com/photos/rocor/10917802203" title="Andy Warhol by rocor, on Flickr"><img src="https://farm3.staticflickr.com/2815/10917802203_2d42a3eb84_q.jpg" width="150" height="150" alt="Andy Warhol"></a></li> 
+    <ul>
+ </div>     
+      
+<div class="slideshow-block">
+  <a href="#" class="link"></a>
+    <ul class="slides">
+      <li><a href="https://www.flickr.com/photos/oddsock/100943517" title="Andy Warhol - Marilyn  1967 by Ian Burt, on Flickr"><img src="https://farm1.staticflickr.com/42/100943517_d7eb5ef652_q.jpg" width="150" height="150" alt="Andy Warhol - Marilyn  1967"></a></li>
+      <li><a href="https://www.flickr.com/photos/loop_oh/1336594977" title="Mao von Andy Warhol by Rupert Ganzer, on Flickr"><img src="https://farm2.staticflickr.com/1273/1336594977_f14172c6a7_q.jpg" width="150" height="150" alt="Mao von Andy Warhol"></a></li>
+      <li><a href="https://www.flickr.com/photos/rocor/10917802203" title="Andy Warhol by rocor, on Flickr"><img src="https://farm3.staticflickr.com/2815/10917802203_2d42a3eb84_q.jpg" width="150" height="150" alt="Andy Warhol"></a></li> 
+    <ul>
+ </div>       
+ 
+<div class="clear"></div>
+<h3>Photo Credits:</h3>
+<ul>
+  <li>Andy Warhol - Marilyn  1967 by Ian Burt, on Flickr</li>
+  <li>Mao von Andy Warhol by Rupert Ganzer, on Flickr</li>
+  <li>the velvet underground &amp; nico  1967 by Ian Burt, on Flickr</li>
+  <li>Andy Warhol by rocor, on Flickr</li>
+
+
+  <script type="text/javascript">jQuery(function($){
+
+  // Cycle plugin
+  $('.slides').cycle({
+      fx:     'none',
+      speed:   150,
+      timeout: 5
+  }).cycle("pause");
+
+  // Pause &amp; play on hover
+  $('.slideshow-block').hover(function(){
+    $(this).find('.slides').addClass('active').cycle('resume');
+  }, function(){
+    $(this).find('.slides').removeClass('active').cycle('pause');
+  });
+
+});</script>
+
+</body>
+</html>

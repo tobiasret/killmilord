@@ -1,0 +1,12 @@
+@keyframes hover-pop {
+  50% {
+    transform: scale(1.2);
+  }
+}
+.pop {
+  transition: transform 0.3s ease;
+}
+.pop:hover, .pop:focus, .pop:active {
+  cursor: pointer;
+  transform: skew(-10deg);
+}

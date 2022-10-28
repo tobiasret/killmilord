@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="favicon.png">
+	<title></title>
+	<style type="text/css">* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-box {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background: url("killmilord.png") no-repeat center/100% auto;
+  filter: brightness(1.2);
+}
+.img-box:before, .img-box:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+}
+.img-box:before {
+  -webkit-animation: bgHueRotate 1s both infinite;
+          animation: bgHueRotate 1s both infinite;
+}
+.img-box:after {
+  -webkit-animation: bgGlitch 1s both infinite;
+          animation: bgGlitch 1s both infinite;
+}
+
+@-webkit-keyframes bgGlitch {
+  0%, 100% {
+    left: 0;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+  13% {
+    left: 1.5px;
+    -webkit-clip-path: inset(37% 0 10% 0);
+            clip-path: inset(37% 0 10% 0);
+  }
+  18%, 8% {
+    left: 0;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+  31% {
+    left: 1.5px;
+    -webkit-clip-path: inset(9% 0 18% 0);
+            clip-path: inset(9% 0 18% 0);
+  }
+  36%, 26% {
+    left: 0;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+  51% {
+    left: -1.5px;
+    -webkit-clip-path: inset(28% 0 37% 0);
+            clip-path: inset(28% 0 37% 0);
+  }
+  56%, 46% {
+    left: 0;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+  74% {
+    left: -0.5px;
+    -webkit-clip-path: inset(28% 0 3% 0);
+            clip-path: inset(28% 0 3% 0);
+  }
+  79%, 69% {
+    left: 0;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+  94% {
+    left: -0.5px;
+    -webkit-clip-path: inset(14% 0 49% 0);
+            clip-path: inset(14% 0 49% 0);
+  }
+  99%, 89% {
+    left: 0;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+}
+
+@keyframes bgGlitch {
+  0%, 100% {
+    left: 0;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+  13% {
+    left: 1.5px;
+    -webkit-clip-path: inset(37% 0 10% 0);
+            clip-path: inset(37% 0 10% 0);
+  }
+  18%, 8% {
+    left: 0;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+  31% {
+    left: 1.5px;
+    -webkit-clip-path: inset(9% 0 18% 0);
+            clip-path: inset(9% 0 18% 0);
+  }
+  36%, 26% {
+    left: 0;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+  51% {
+    left: -1.5px;
+    -webkit-clip-path: inset(28% 0 37% 0);
+            clip-path: inset(28% 0 37% 0);
+  }
+  56%, 46% {
+    left: 0;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+  74% {
+    left: -0.5px;
+    -webkit-clip-path: inset(28% 0 3% 0);
+            clip-path: inset(28% 0 3% 0);
+  }
+  79%, 69% {
+    left: 0;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+  94% {
+    left: -0.5px;
+    -webkit-clip-path: inset(14% 0 49% 0);
+            clip-path: inset(14% 0 49% 0);
+  }
+  99%, 89% {
+    left: 0;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+}
+@-webkit-keyframes bgHueRotate {
+  0%, 100% {
+    filter: none;
+  }
+  11% {
+    filter: hue-rotate(201deg);
+  }
+  16%, 6% {
+    filter: none;
+  }
+  31% {
+    filter: hue-rotate(74deg);
+  }
+  36%, 26% {
+    filter: none;
+  }
+  51% {
+    filter: hue-rotate(208deg);
+  }
+  56%, 46% {
+    filter: none;
+  }
+  71% {
+    filter: hue-rotate(159deg);
+  }
+  76%, 66% {
+    filter: none;
+  }
+  95% {
+    filter: hue-rotate(43deg);
+  }
+  100%, 90% {
+    filter: none;
+  }
+}
+@keyframes bgHueRotate {
+  0%, 100% {
+    filter: none;
+  }
+  11% {
+    filter: hue-rotate(201deg);
+  }
+  16%, 6% {
+    filter: none;
+  }
+  31% {
+    filter: hue-rotate(74deg);
+  }
+  36%, 26% {
+    filter: none;
+  }
+  51% {
+    filter: hue-rotate(208deg);
+  }
+  56%, 46% {
+    filter: none;
+  }
+  71% {
+    filter: hue-rotate(159deg);
+  }
+  76%, 66% {
+    filter: none;
+  }
+  95% {
+    filter: hue-rotate(43deg);
+  }
+  100%, 90% {
+    filter: none;
+  }
+}</style>
+</head>
+<body>
+
+	<div class="img-box"></div>
+
+</body>
+</html>
